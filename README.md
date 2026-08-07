@@ -1,22 +1,30 @@
-# Project 1: Basic Network Mapping and Vulnerability Discovery
+Project 1: Basic Network Mapping and Vulnerability Discovery
 
 🛠️ Tools Used
-* VirtualBox
-* Kali Linux (Attacker Machine)
-* Metasploitable2 / Windows 10 VM (Target Machine)
-* Nmap
+* VMware Workstation Pro
+* Kali Linux 2026 (Attacker Machine)
+* Windows 7 Virtual Machine (Target Machine)
+* Nmap 7.99
 
 📋 Objective
-To scan a target machine within a private virtual lab network to discover active hosts, open ports, and running services.
+To scan a target machine within a private VMware virtual network to discover active hosts, open ports, and running services for vulnerability assessment.
 
 🚀 Steps Performed
-1. **Network Discovery**: Ran `sudo netdiscover -r 192.168.56.0/24` to find the target's IP address.
-2. **Port Scanning**: Executed a stealth scan using Nmap: `nmap -sS -sV -O <Target_IP>`
-3. **Analysis**: Identified open ports like 21 (FTP), 22 (SSH), and 80 (HTTP) along with their software versions.
+1. **Network Configuration**: Configured both Kali Linux and Windows 7 on the same VMware NAT network.
+2. **Target Identification**: Found the Target Windows VM IP address (`192.168.143.129`).
+3. **Nmap Scanning**: Executed a stealth and service detection scan using the command:
+   ```bash
+   nmap -sS -sV -O 192.168.143.129
+   ```
+4. **Analysis of Open Ports**:
+   * Port 135/tcp**: Microsoft Windows RPC active.
+   * Port 139/tcp**: NetBIOS-SSN active.
+   * Port 445/tcp**: Microsoft-DS active. (Potential target for SMB vulnerabilities like EternalBlue).
 
 📸 Lab Screenshots
-*(Ithe tumcha Kali terminal cha scan screenshot select karun directly web page var drag-and-drop / paste kara)*
+<img width="1919" height="987" alt="Screenshot 2026-08-07 210141" src="https://github.com/user-attachments/assets/e6b29006-d598-4763-ae29-e58c61917135" />
+
 
 🧠 Key Learnings
-* Understood how Nmap's SYN stealth scan works.
-* Learned how outdated service versions create vulnerabilities for potential exploits.
+* Learned how Nmap interacts with remote network firewalls to perform OS fingerprinting (`-O`).
+* Understood that open SMB ports (445) on an unpatched Windows 7 system are prime targets for cyber attacks.
