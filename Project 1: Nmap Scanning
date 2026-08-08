@@ -22,7 +22,7 @@ To scan a target machine within a private VMware virtual network to discover act
    * Port 445/tcp**: Microsoft-DS active. (Potential target for SMB vulnerabilities like EternalBlue).
 
 📸 Lab Screenshots
-<img width="1919" height="987" alt="Screenshot 2026-08-07 210141" src="https://github.com/user-attachments/assets/e6b29006-d598-4763-ae29-e58c61917135"/>
+
 
 
 🧠 Key Learnings
