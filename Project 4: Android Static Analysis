@@ -1,5 +1,9 @@
-App Tested: InsecureBankv2.apk 
-Tool Used: Mobile Security Framework (MobSF) Docker Container
-Result Matrix: Security Score 32/100 (High Risk Vulnerability Detected) <img width="1919" height="1079" alt="Image" src="![MobSF Report](https://github.com)
-" />
-Impact: Improper Component Exporting & Loose Hardcoded Parameters
+# Project 4: Android Static Analysis
+
+* **App Tested:** InsecureBankv2.apk
+* **Tool Used:** Mobile Security Framework (MobSF) Docker Container
+* **Result Matrix:** Security Score 32/100 (High Risk Vulnerability Detected)
+* **Impact:** Improper Component Exporting & Loose Hardcoded Parameters
+
+### Analysis Evidence Screenshot
+![MobSF Report](https://github.com)
