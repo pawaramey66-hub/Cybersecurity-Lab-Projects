@@ -1,30 +1,35 @@
-Project 1: Basic Network Mapping and Vulnerability Discovery
+# Project 01 — Network Mapping & Service Discovery
 
-🛠️ Tools Used
-* VMware Workstation Pro
-* Kali Linux 2026 (Attacker Machine)
-* Windows 7 Virtual Machine (Target Machine)
-* Nmap 7.99
+## Objective
+Perform network discovery and service enumeration against an intentionally vulnerable Windows virtual machine inside a private VMware lab.
 
-📋 Objective
-To scan a target machine within a private VMware virtual network to discover active hosts, open ports, and running services for vulnerability assessment.
+## Lab Environment
+- VMware Workstation Pro
+- Kali Linux
+- Windows 7 virtual machine
+- Nmap
 
-🚀 Steps Performed
-1. **Network Configuration**: Configured both Kali Linux and Windows 7 on the same VMware NAT network.
-2. **Target Identification**: Found the Target Windows VM IP address (`192.168.143.129`).
-3. **Nmap Scanning**: Executed a stealth and service detection scan using the command:
-   ```bash
-   nmap -sS -sV -O 192.168.143.129
-   ```
-4. **Analysis of Open Ports**:
-   * Port 135/tcp**: Microsoft Windows RPC active.
-   * Port 139/tcp**: NetBIOS-SSN active.
-   * Port 445/tcp**: Microsoft-DS active. (Potential target for SMB vulnerabilities like EternalBlue).
+## Methodology
+1. Connected the Kali and Windows VMs to the same isolated virtual network.
+2. Identified the target VM within the lab.
+3. Performed TCP SYN, service-version, and OS-detection scanning.
+4. Reviewed discovered services and considered their security implications.
 
-📸 Lab Screenshots
+## Observations
+The lab identified common Windows services including RPC, NetBIOS/SMB, and Microsoft-DS. Exposed SMB services on legacy systems can increase security risk when systems are unpatched or improperly configured.
 
+## Evidence
+![Nmap scan evidence](assets/nmap.png)
 
+## Key Learnings
+- Understood the purpose of host and service discovery.
+- Practiced interpreting Nmap scan results.
+- Learned why legacy network services should be minimized, monitored, and properly patched.
 
-🧠 Key Learnings
-* Learned how Nmap interacts with remote network firewalls to perform OS fingerprinting (`-O`).
-* Understood that open SMB ports (445) on an unpatched Windows 7 system are prime targets for cyber attacks.
+## Defensive Takeaways
+- Keep operating systems and network services patched.
+- Disable unnecessary services and ports.
+- Restrict SMB exposure with host/network firewall rules.
+- Continuously monitor network assets and unexpected open ports.
+
+> **Lab note:** Testing was performed only in an authorized private virtual environment.
