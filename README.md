@@ -8,10 +8,10 @@ Hands-on cybersecurity projects completed in an isolated home virtual lab while 
 
 | # | Project | Focus | Tools |
 |---|---|---|---|
-| 01 | [Network Mapping & Service Discovery](projects/01-nmap-network-scanning/) | Host discovery, ports, services, OS detection | Nmap, Kali Linux, VMware |
-| 02 | [Metasploit Lab & Vulnerability Analysis](projects/02-metasploit-vulnerability-analysis/) | Vulnerability validation, troubleshooting, remediation | Metasploit, Kali Linux, VMware |
-| 03 | [Network Traffic Analysis](projects/03-wireshark-traffic-analysis/) | HTTP traffic, packet inspection, security observations | Wireshark, Kali Linux |
-| 04 | [Android Static Analysis](projects/04-android-static-analysis/) | Mobile application security assessment | MobSF, Docker |
+| 01 | [Network Mapping & Service Discovery](projects/01-nmap-network-scanning) | Host discovery, ports, services, OS detection | Nmap, Kali Linux, VMware |
+| 02 | [Metasploit Lab & Vulnerability Analysis](projects/02-metasploit-vulnerability-analysis) | Vulnerability validation, troubleshooting, remediation | Metasploit, Kali Linux, VMware |
+| 03 | [Network Traffic Analysis](projects/03-wireshark-traffic-analysis) | HTTP traffic, packet inspection, security observations | Wireshark, Kali Linux |
+| 04 | [Android Static Analysis](projects/04-android-static-analysis) | Mobile application security assessment | MobSF, Docker |
 
 ## 🛠️ Skills Demonstrated
 
@@ -43,16 +43,17 @@ The techniques documented here are intended for authorized security testing, edu
 ```text
 Cybersecurity-Lab-Projects/
 ├── README.md
-├── projects/
-│   ├── 01-nmap-network-scanning/
-│   │   └── README.md
-│   ├── 02-metasploit-vulnerability-analysis/
-│   │   └── README.md
-│   ├── 03-wireshark-traffic-analysis/
-│   │   └── README.md
-│   └── 04-android-static-analysis/
-│       └── README.md
-└── nmap.png
+└── projects/
+    ├── 01-nmap-network-scanning/
+    │   ├── README.md
+    │   └── assets/
+    │       └── nmap.png
+    ├── 02-metasploit-vulnerability-analysis/
+    │   └── README.md
+    ├── 03-wireshark-traffic-analysis/
+    │   └── README.md
+    └── 04-android-static-analysis/
+        └── README.md
 ```
 
 ---
